@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'category_item.dart';
-import 'dummy.dart';
+import 'dummy_data.dart';
 
 class MyHomePage extends StatelessWidget {
   @override

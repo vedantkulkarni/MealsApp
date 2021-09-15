@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:mealsapp/meal_item.dart';
+import 'dummy_data.dart';
 
 class CategoryRecipesScreen extends StatelessWidget {
   @override
@@ -7,14 +9,22 @@ class CategoryRecipesScreen extends StatelessWidget {
         .settings
         .arguments as Map<String, String>; //ModalRoute
     final String title = routeArgs["title"].toString();
+    final String id = routeArgs["id"].toString();
+    final List recipesList = DUMMY_MEALS.where((element) {
+      return element.categories.contains(id);
+    }).toList();
     return Scaffold(
-      appBar: AppBar(
-        title: Text(title),
-        centerTitle: false,
-      ),
-      body: Center(
-        child: Text("The recipes for this category ! "),
-      ),
-    );
+        appBar: AppBar(
+          title: Text(title),
+          centerTitle: false,
+        ),
+        body: ListView.builder(
+          itemBuilder: (ctx, index) {
+            return Container(
+              child: MealItem(recipesList[index].imageUrl),
+            );
+          },
+          itemCount: recipesList.length,
+        ));
   }
 }
