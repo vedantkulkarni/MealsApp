@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mealsapp/category_recipes.dart';
 import './home_page.dart';
 
 void main() {
@@ -17,6 +18,7 @@ class MyApp extends StatelessWidget {
         canvasColor: Color.fromRGBO(255, 254, 229, 1),
       ),
       home: MyHomePage(),
+      routes: {"/recipes_screen": (ctx) => CategoryRecipesScreen()},
     );
   }
 }

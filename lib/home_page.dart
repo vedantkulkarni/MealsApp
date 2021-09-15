@@ -18,7 +18,7 @@ class MyHomePage extends StatelessWidget {
               crossAxisSpacing: 20,
               mainAxisSpacing: 20),
           children: DUMMY_CATEGORIES.map((index) {
-            return CategoryItem(index.title, index.color);
+            return CategoryItem(index.title, index.color, index.id);
           }).toList(),
         ),
       ),
