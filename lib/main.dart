@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mealsapp/category_recipes.dart';
 import 'package:mealsapp/item_details_screen.dart';
+import 'package:mealsapp/tabs_screen.dart';
 import './home_page.dart';
 
 void main() {
@@ -20,9 +21,10 @@ class MyApp extends StatelessWidget {
           fontFamily: 'Raleway',
           textTheme: const TextTheme(
               headline1: TextStyle(fontSize: 25, color: Colors.black))),
-      home: MyHomePage(),
+      initialRoute: "/",
       routes: {
-        "/recipes_screen": (ctx) => CategoryRecipesScreen(),
+        "/": (ctx) => MyHomePage(),
+        "/recipes_screen": (ctx) => TabsScreen(),
         "/item_details_screen": (ctx) => ItemDetailsScreen()
       },
     );

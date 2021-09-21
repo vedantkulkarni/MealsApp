@@ -14,22 +14,22 @@ class CategoryRecipesScreen extends StatelessWidget {
       return element.categories.contains(id);
     }).toList();
     return Scaffold(
-        appBar: AppBar(
-          title: Text(title),
-          centerTitle: false,
-        ),
+        // appBar: AppBar(
+        //   title: Text(title),
+        //   centerTitle: false,
+        // ),
         body: ListView.builder(
-          itemBuilder: (ctx, index) {
-            return Container(
-              child: MealItem(
-                  recipesList[index].imageUrl,
-                  recipesList[index].duration.toString(),
-                  recipesList[index].complexity,
-                  recipesList[index].title,
-                  recipesList[index].id),
-            );
-          },
-          itemCount: recipesList.length,
-        ));
+      itemBuilder: (ctx, index) {
+        return Container(
+          child: MealItem(
+              recipesList[index].imageUrl,
+              recipesList[index].duration.toString(),
+              recipesList[index].complexity,
+              recipesList[index].title,
+              recipesList[index].id),
+        );
+      },
+      itemCount: recipesList.length,
+    ));
   }
 }
