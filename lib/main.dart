@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mealsapp/category_recipes.dart';
+import 'package:mealsapp/recipe_list.dart';
 import 'package:mealsapp/item_details_screen.dart';
 import 'package:mealsapp/tabs_screen.dart';
 import './home_page.dart';
@@ -13,10 +13,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
-          primarySwatch: Colors.pink,
-          accentColor: Colors.amber,
+          primarySwatch: Colors.lightBlue,
+          accentColor: Colors.blueGrey,
+
           // canvasColor: Color.fromRGBO(255, 254, 229, 1),
           fontFamily: 'Raleway',
           textTheme: const TextTheme(
@@ -24,7 +26,7 @@ class MyApp extends StatelessWidget {
       initialRoute: "/",
       routes: {
         "/": (ctx) => MyHomePage(),
-        "/recipes_screen": (ctx) => TabsScreen(),
+        "/tabs_screen": (ctx) => TabsScreen(),
         "/item_details_screen": (ctx) => ItemDetailsScreen()
       },
     );

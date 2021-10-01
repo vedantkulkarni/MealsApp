@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mealsapp/dummy_data.dart';
 import 'package:mealsapp/models/meal.dart';
-import './category_recipes.dart';
+import 'recipe_list.dart';
 
 class ItemDetailsScreen extends StatelessWidget {
   @override
@@ -13,34 +13,40 @@ class ItemDetailsScreen extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text(src[1]),
+        elevation: 0,
+        backgroundColor: Colors.transparent,
+        title: Text(
+          src[1],
+          style: TextStyle(fontWeight: FontWeight.bold, fontSize: 23),
+        ),
       ),
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Container(
-                padding: EdgeInsets.all(20),
+                padding: EdgeInsets.all(0),
                 height: MediaQuery.of(context).size.height * 0.4,
                 child: ClipRRect(
-                  borderRadius: BorderRadius.circular(20),
                   child: Image.network(
                     src[0],
                     fit: BoxFit.cover,
                   ),
                 ),
               ),
-              Divider(
-                color: Colors.black45,
+              SizedBox(
+                height: 15,
               ),
               Container(
+                margin: EdgeInsets.only(left: 20),
                 child: Text(
                   "Ingredients",
-                  style: Theme.of(context).textTheme.headline1,
+                  style: TextStyle(
+                      fontWeight: FontWeight.w400,
+                      fontSize: 22,
+                      color: Colors.black),
                 ),
-              ),
-              SizedBox(
-                height: 5,
               ),
               Divider(
                 color: Colors.black,
@@ -53,17 +59,22 @@ class ItemDetailsScreen extends StatelessWidget {
                       children: [
                         ListTile(
                           leading: CircleAvatar(
-                            child: Text((index + 1).toString()),
+                            maxRadius: 15,
+                            child: Text(
+                              (index + 1).toString(),
+                              style: TextStyle(fontSize: 16),
+                            ),
                           ),
                           title: Text(
                             recipesList.ingredients[index],
-                            style: TextStyle(fontSize: 17),
+                            style: TextStyle(fontSize: 14),
                           ),
                         ),
                         Divider(
                           color: Theme.of(context).primaryColor,
                           indent: 30,
                           endIndent: 30,
+                          height: 3,
                         )
                       ],
                     );

@@ -16,11 +16,11 @@ class MealItem extends StatelessWidget {
       return "Challenging";
   }
 
-  MealItem(this.src, this.duration, this.difficulty, this.title,this.id);
+  MealItem(this.src, this.duration, this.difficulty, this.title, this.id);
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      splashColor: Theme.of(context).accentColor,
+      splashColor: Colors.lightBlue,
       onTap: () {
         Navigator.pushNamed(context, "/item_details_screen",
             arguments: [src, title, id]);

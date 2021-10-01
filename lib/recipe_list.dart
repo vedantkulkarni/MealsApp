@@ -14,10 +14,6 @@ class CategoryRecipesScreen extends StatelessWidget {
       return element.categories.contains(id);
     }).toList();
     return Scaffold(
-        // appBar: AppBar(
-        //   title: Text(title),
-        //   centerTitle: false,
-        // ),
         body: ListView.builder(
       itemBuilder: (ctx, index) {
         return Container(
