@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:mealsapp/recipe_list.dart';
 
+import 'dummy_data.dart';
+
 class CategoryItem extends StatelessWidget {
   final String title;
   final Color color;
@@ -40,6 +42,12 @@ class CategoryItem extends StatelessWidget {
       return "https://cdn-icons-png.flaticon.com/512/3217/3217037.png";
   }
 
+  get finalList {
+    return DUMMY_MEALS.where((element) {
+      return element.categories.contains(id);
+    }).toList();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Card(
@@ -64,11 +72,20 @@ class CategoryItem extends StatelessWidget {
                   fit: BoxFit.contain,
                 ),
               ),
-              Container(
-                child: Text(
-                  title,
-                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
-                ),
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Container(
+                    child: Text(
+                      title,
+                      style:
+                          TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+                    ),
+                  ),
+                  Container(
+                    child: Text("${finalList.length} Items"),
+                  )
+                ],
               ),
             ],
           ),

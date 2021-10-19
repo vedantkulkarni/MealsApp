@@ -4,10 +4,18 @@ import 'package:mealsapp/favourites_screen.dart';
 
 class TabsScreen extends StatefulWidget {
   @override
-  _TabsScreenState createState() => _TabsScreenState();
+  State<TabsScreen> createState() => _TabsScreenState();
 }
 
 class _TabsScreenState extends State<TabsScreen> {
+  final List favourites = ["Vedant"];
+
+  void _setfavourites(String id) {
+    setState(() {
+      favourites.add(id);
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     final Map<String, String> args =
@@ -43,8 +51,10 @@ class _TabsScreenState extends State<TabsScreen> {
             ],
           ),
         ),
-        body:
-            TabBarView(children: [CategoryRecipesScreen(), FavouritesScreen()]),
+        body: TabBarView(children: [
+          CategoryRecipesScreen(_setfavourites),
+          FavouritesScreen(favourites)
+        ]),
       ),
     );
   }

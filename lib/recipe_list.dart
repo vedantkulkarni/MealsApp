@@ -3,6 +3,9 @@ import 'package:mealsapp/meal_item.dart';
 import 'dummy_data.dart';
 
 class CategoryRecipesScreen extends StatelessWidget {
+  final Function setFavourites;
+
+  CategoryRecipesScreen(this.setFavourites);
   @override
   Widget build(BuildContext context) {
     final Map<String, String> routeArgs = ModalRoute.of(context)!
@@ -22,7 +25,8 @@ class CategoryRecipesScreen extends StatelessWidget {
               recipesList[index].duration.toString(),
               recipesList[index].complexity,
               recipesList[index].title,
-              recipesList[index].id),
+              recipesList[index].id,
+              setFavourites),
         );
       },
       itemCount: recipesList.length,

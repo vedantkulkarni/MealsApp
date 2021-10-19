@@ -48,8 +48,9 @@ class ItemDetailsScreen extends StatelessWidget {
                       color: Colors.black),
                 ),
               ),
-              Divider(
-                color: Colors.black,
+              
+              SizedBox(
+                height: 10,
               ),
               Container(
                 height: MediaQuery.of(context).size.height * 0.4,
