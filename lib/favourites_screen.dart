@@ -31,9 +31,21 @@ class FavouritesScreen extends StatelessWidget {
                     margin:
                         EdgeInsets.only(left: 20, bottom: 5, top: 5, right: 20),
                     child: ListTile(
-                        leading: Text("${index + 1} ."),
-                        title:
-                            Text(favmealsList.favourites[index].toString())),
+                      leading: Text(
+                        "${index + 1} .",
+                        style: TextStyle(
+                            fontSize: 20, fontWeight: FontWeight.bold),
+                      ),
+                      title: Text(
+                        favmealsList.favourites[index].toString(),
+                        style: TextStyle(fontWeight: FontWeight.bold),
+                      ),
+                      subtitle: Text("Swipe left to delete"),
+                      trailing: Icon(
+                        Icons.arrow_back,
+                        color: Colors.red,
+                      ),
+                    ),
                   ),
                 );
               },
