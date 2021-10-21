@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
 import 'package:mealsapp/providers/app_bar_state_provider.dart';
 
@@ -27,7 +28,6 @@ class SearchAppBarState extends State<SearchAppBar> {
   var searchIconState = Icon(
     Icons.search,
     size: 25,
-    
   );
   bool state = false;
   final controller = new TextEditingController();
@@ -59,6 +59,8 @@ class SearchAppBarState extends State<SearchAppBar> {
   Widget build(BuildContext context) {
     AppBarBoolProvider value = Provider.of<AppBarBoolProvider>(context);
     return AppBar(
+      systemOverlayStyle:
+          SystemUiOverlayStyle(statusBarColor: Colors.transparent),
       iconTheme: IconThemeData(color: Colors.black, size: 25),
       backgroundColor: Colors.transparent,
       title: !value.app_bar_toggle_state
