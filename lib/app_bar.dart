@@ -27,6 +27,7 @@ class SearchAppBarState extends State<SearchAppBar> {
   var searchIconState = Icon(
     Icons.search,
     size: 25,
+    
   );
   bool state = false;
   final controller = new TextEditingController();
@@ -76,7 +77,9 @@ class SearchAppBarState extends State<SearchAppBar> {
                   print(input);
                   for (int i = 0; i < _mealCategories.length; i++) {
                     if (input != "") {
-                      if (_mealCategories[i].contains(input)) {
+                      if (_mealCategories[i]
+                          .toLowerCase()
+                          .contains(input.toLowerCase())) {
                         if (!value.searchItemList
                             .contains(_mealCategories[i])) {
                           print(_mealCategories[i]);
@@ -88,7 +91,8 @@ class SearchAppBarState extends State<SearchAppBar> {
                     }
                   }
                 },
-                cursorHeight: 30.0,
+                decoration: InputDecoration(),
+                cursorHeight: 25.0,
               ),
             ),
       elevation: 0,

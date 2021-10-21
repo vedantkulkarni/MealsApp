@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:mealsapp/meal_item.dart';
+import 'package:mealsapp/providers/favourites_provider.dart';
 import 'dummy_data.dart';
+import 'package:provider/provider.dart';
 
 class CategoryRecipesScreen extends StatelessWidget {
   final Function setFavourites;
@@ -16,6 +18,7 @@ class CategoryRecipesScreen extends StatelessWidget {
     final List recipesList = DUMMY_MEALS.where((element) {
       return element.categories.contains(id);
     }).toList();
+    FavouritesProvider value = Provider.of<FavouritesProvider>(context);
     return Scaffold(
         body: ListView.builder(
       itemBuilder: (ctx, index) {
@@ -26,7 +29,7 @@ class CategoryRecipesScreen extends StatelessWidget {
               recipesList[index].complexity,
               recipesList[index].title,
               recipesList[index].id,
-              setFavourites),
+              setFavourites,value),
         );
       },
       itemCount: recipesList.length,
