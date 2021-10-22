@@ -7,7 +7,7 @@
   <h1 align="center">Meals App</h1>
 
   <p align="center">
-    Meals,Recipes,Ingridients and much more!
+    Meals, Recipes, Ingridients and much more!
     <br/>
     <br/>   
   </p>
