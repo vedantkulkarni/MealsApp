@@ -64,7 +64,7 @@ This is a standalone project made completely out of curiosity. Meals App display
 
 ## Screenshots
 
-<img src="" width=200 height=400>
+<img src="https://github.com/vedantkulkarni/MealsApp/blob/master/screenshots/WhatsApp%20Image%202021-10-21%20at%2011.38.52%20PM.jpeg" width=300 height=550>
 
 ## Features
 * Interactive UI
