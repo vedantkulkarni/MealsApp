@@ -63,8 +63,11 @@ This is a standalone project made completely out of curiosity. Meals App display
 
 
 ## Screenshots
+<div align ="center">
+<img src="https://github.com/vedantkulkarni/MealsApp/blob/master/screenshots/WhatsApp%20Image%202021-10-21%20at%2011.38.52%20PM.jpeg" width=300 height=550>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://github.com/vedantkulkarni/MealsApp/blob/master/screenshots/WhatsApp%20Image%202021-10-21%20at%2011.38.02%20PM.jpeg" width=300 height=550>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://github.com/vedantkulkarni/MealsApp/blob/master/screenshots/WhatsApp%20Image%202021-10-21%20at%2011.38.02%20PM%20(1).jpeg" width=300 height=550>
+</div>
 
-<img src="https://github.com/vedantkulkarni/MealsApp/blob/master/screenshots/WhatsApp%20Image%202021-10-21%20at%2011.38.52%20PM.jpeg" width=300 height=550>
+
 
 ## Features
 * Interactive UI
