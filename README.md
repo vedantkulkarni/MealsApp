@@ -19,7 +19,7 @@
     <a href="https://github.com/vedantkulkarni/MealsApp/issues" target="blank">
 <img src="https://img.shields.io/bitbucket/issues-raw/vedantkulkarni/MealsApp?style=flat-square" alt="Meals App Issues"/>
 </a>
-    <a href="https://github.com/vedantkulkarni/MealsApp/issues" target="blank">
+    <a href="https://github.com/vedantkulkarni/MealsApp/stargazers" target="blank">
 <img src="https://img.shields.io/packagist/stars/vedantkulkarni/MealsApp?style=flat-square" alt="Star this repo"/>
 </a>
 </div>
