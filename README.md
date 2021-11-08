@@ -48,7 +48,7 @@ This is a standalone project made completely out of curiosity. Meals App display
 
 
 
-## Built With�
+## Built With
 
 <p align="left">
 <a href="https://flutter.dev/" target="_blank"><img src="https://img.icons8.com/color/48/000000/flutter.png" width="45" height="45"/> </a> 
